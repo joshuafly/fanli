@@ -58,13 +58,11 @@ maingo()
 {
     color
     GO111MODULE=on
-    GOPROXY=https://goproxy.cn
     GOROOT=/usr/local/go
     GOPATH=/usr/local/go/path
     #GOBIN=/root/go/bin
     PATH=$PATH:$GOROOT/bin:$GOPATH/bin
     export GO111MODULE=on
-    export GOPROXY=https://goproxy.cn
     export GOROOT=/usr/local/go
     export GOPATH=/usr/local/go/path
     export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
@@ -82,7 +80,6 @@ maingo()
         echo "export GOROOT=${GOROOT}">>/etc/profile
         echo "export GOPATH=${GOPATH}">>/etc/profile
         echo "export GO111MODULE=on"  >>/etc/profile
-        echo "export GOPROXY=https://goproxy.cn" >>/etc/profile
         echo "export PATH=${PATH}">>/etc/profile
         . $HOME/.profile
         echo -e ${green}
@@ -117,7 +114,7 @@ sillyGirl()
     fi
     #克隆sillyGirl库
     echo "开始克隆sillyGirl库..."
-    git clone https://ghproxy.com/https://github.com/cdle/sillyGirl.git;
+    git clone https://github.com/cdle/sillyGirl.git;
     #进入sillyGirl文件夹
     if [ $? -eq 0 ]; then 
         sleep 3s
@@ -126,7 +123,7 @@ sillyGirl()
     fi
     #获取dev.go文件
     echo "下载dev.go文件"
-    wget https://ghproxy.com/https://raw.githubusercontent.com/hdbjlizhe/oneKeyForSillGirl/main/dev.go
+    wget https://raw.githubusercontent.com/hdbjlizhe/oneKeyForSillGirl/main/dev.go
     #进入develop文件夹
     if [[ $? == 0 ]]; then
         sleep 3s
@@ -135,13 +132,13 @@ sillyGirl()
     fi
     echo "进入develop文件夹，开始克隆常用库、返利库"
     #克隆一些必要的库
-    git clone https://ghproxy.com/https://github.com/hdbjlizhe/fanli_jd.git;
-    git clone https://ghproxy.com/https://github.com/hdbjlizhe/fanli_tb.git;
-    git clone https://ghproxy.com/https://github.com/hdbjlizhe/fanli_pdd.git;
-    git clone https://ghproxy.com/https://github.com/hdbjlizhe/fanli_vip.git;
-    git clone https://ghproxy.com/https://github.com/ufuckee/jd_cookie.git;
-    git clone https://ghproxy.com/https://github.com/cdle/jd_price.git;
-    git clone https://ghproxy.com/https://github.com/hdbjlizhe/yangmao.git
+    git clone https://github.com/hdbjlizhe/fanli_jd.git;
+    git clone https://github.com/hdbjlizhe/fanli_tb.git;
+    git clone https://github.com/hdbjlizhe/fanli_pdd.git;
+    git clone https://github.com/hdbjlizhe/fanli_vip.git;
+    git clone https://github.com/ufuckee/jd_cookie.git;
+    git clone https://github.com/cdle/jd_price.git;
+    git clone https://github.com/hdbjlizhe/yangmao.git
     #编译
     #if [[ $? == 0 ]]; then 
     #    cd ..;
@@ -152,7 +149,7 @@ sillyGirl()
     #fi
     cd ..;
     sleep 3s
-    wget https://ghproxy.com/https://github.com/hdbjlizhe/fanli/releases/download/main/sillyGirl_amd64.tar.gz
+    wget https://github.com/hdbjlizhe/fanli/releases/download/main/sillyGirl_amd64.tar.gz
     tar -zxvf sillyGirl_amd64.tar.gz
     #将备份的文件拷进sillyGirl文件夹
     sleep 3s
